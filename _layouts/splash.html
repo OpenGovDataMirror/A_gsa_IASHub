@@ -1,0 +1,90 @@
+---
+---
+<!DOCTYPE html>
+<head>
+    {% include head.html %}
+    <script type="text/javascript">
+    $(document).ready(function(){
+      var d = new Date();
+      changeBackground(d);
+    });
+    /**
+    * changeBackground - function to update background image on home page depending on the time of day
+    * accepts a variable formatted as a javascript Date
+    * Credit to James Barnett, http://codepen.io/jamesbarnett/pen/kdDBL
+    */
+    function changeBackground(d) {
+      
+      var n = d.getHours();
+      if (n > 19 || n < 6) {
+        // If time is after 7PM or before 6AM, apply night theme to ‘body’
+        $("body").removeClass("day morning").addClass("night");
+        $("#greeting").text("Good evening");
+      }
+      else if (n > 12 && n <= 19) {
+        // If time is between 12PM – 7PM day theme to ‘body’
+        $("body").removeClass("night morning").addClass("day");
+        $("#greeting").text("Good afternoon");
+      }
+      else {
+        // Else use morning theme
+        $("body").removeClass("night day").addClass("morning");
+        $("#greeting").text("Good morning");
+      }
+    
+  }
+    </script>
+<style type="text/css">
+
+.day {
+   background:url(images/day_charleston.jpg);
+}
+.morning {
+  background:url(images/morning_potomac.jpg);
+}
+.night {
+  background:url(images/washington_monument_night.jpg);
+}
+.bodybg {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+  margin:0px;
+  background-repeat: no-repeat;
+}
+
+input[type="search"] {
+  border: 0px dotted #999;
+  border-radius: 0;
+  color:#2B1D17;
+  -webkit-appearance: none;
+}
+input[type="search"] {
+
+  background-color : #d1d1d1; 
+  opacity: 0.85;
+}
+*::-webkit-input-placeholder {
+    color: #2B1D17;
+    font-weight: bold;
+}
+*:-moz-placeholder {
+    color: #2B1D17;
+    font-weight: bold;
+}
+*::-moz-placeholder {
+    color: #2B1D17;
+    font-weight: bold;
+}
+*:-ms-input-placeholder {
+    color: #2B1D17;
+    font-weight: bold;
+}
+</style>
+
+</head>
+<body class="morning bodybg" >
+  {% include topnav.html %}
+{{content}}
+</body>

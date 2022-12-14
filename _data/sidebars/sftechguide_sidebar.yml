@@ -1,0 +1,79 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+
+entries:
+- title: Sidebar
+  product: Salesforce Technical Guidelines
+  version: 1.0
+  subcategories:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    items:
+    - title:
+      url: /titlepage/
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage/
+      output: pdf
+      type: frontmatter
+
+  - title: Overview
+    output: web, pdf
+    items:
+      - title: Introduction
+        url: /sf-tech-guide/
+        output: web, pdf
+  
+  - title: Architect & Build Guidelines
+    output: web, pdf
+    items:
+    - title: Object Model Design
+      url: /sf-tech-guide/object-model-design/
+      output: web, pdf
+    - title: Development
+      url: /sf-tech-guide/development/
+      output: web, pdf
+    - title: Licenses
+      url: /sf-tech-guide/licenses/
+      output: web, pdf
+    - title: Security
+      url: /sf-tech-guide/security/
+      output: web, pdf
+
+  - title: Testing
+    output: web, pdf
+    items:
+    - title: Unit Testing
+      url: /sf-tech-guide/unit-testing/
+      output: web, pdf
+    - title: Integration Testing
+      url: /sf-tech-guide/integration-testing/
+      output: web, pdf
+    - title: Functional E2E Testing
+      url: /sf-tech-guide/functional-e2e-testing/
+      output: web, pdf
+
+  - title: Deployment
+    output: web, pdf
+    items:
+    - title: Environment Management
+      url: /sf-tech-guide/environment-management/
+      output: web, pdf
+    - title: Deployment Plan
+      url: /sf-tech-guide/deployment-plan/
+      output: web, pdf
+    - title: Code and Configuration
+      url: /sf-tech-guide/release-management-code-configuration/
+      output: web, pdf
+    - title: Click Path Document
+      url: /sf-tech-guide/click-path-document/
+      output: web, pdf
+  - title: Technical Change Management 
+    output: web, pdf
+    items:
+      - title: Background
+        url: /sf-tech-guide/technical-change-management/
+        output: web, pdf
